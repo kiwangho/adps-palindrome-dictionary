@@ -60,7 +60,7 @@ Under the `<ROOT>/test` folder, launch the following command.  It will compile t
 
 The service will be accessible at the following REST endpoint:
 
-http://localhost:8080/palindrome
+http://localhost:8080/index.html
 
 ## Option 2 - Manually launching the service 
 
