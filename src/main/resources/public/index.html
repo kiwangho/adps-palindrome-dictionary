@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="demo">
+<h1>The Palindrome and Dictionary Word Test</h1>
+<div>
+    <input name="word" id="testword" value="Mom">
+</div>
+<button type="button" onclick="loadDoc()">Test Word</button>
+</div>
+<div id="result">
+</div>
+
+<script>
+function loadDoc() {
+$.ajax({
+    type: "GET",
+    url: "http://localhost:8080/palindrome",
+    data: {
+            "word" : $(testword).val()
+          },
+    success: function(data, textStatus) {
+        $("#result").html(JSON.stringify(data));
+    },
+    error: function() {
+        alert('Not OKay');
+    }
+});
+
+}
+</script>
+
+</body>
+</html>
